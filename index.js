@@ -8,6 +8,10 @@ const app=express()
 require('dotenv').config()
 app.use(cors())
 app.use(express.json())
+
+app.get("/",(req,res)=>{
+    res.send("pdhna likhna sadhe 22 aaya bdaa api bnanne")
+})
 app.use("/users",appRouter)
 app.use("/notes",authenticate,noteRouter)
 

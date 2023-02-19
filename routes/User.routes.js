@@ -4,13 +4,7 @@ const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const appRouter=express.Router()
 
-appRouter.get("/users",async(req,res)=>{
-   
 
-    const data= await UserModel.find()
-    console.log("getting")
-    res.send(data)
-})
 appRouter.post("/register",(req,res)=>{
 const {name,email,pass}=req.body
 try {
